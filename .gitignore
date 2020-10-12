@@ -1,0 +1,14 @@
+# hidden folder
+__pycache__/
+.vscode/
+
+# compiled files
+*.py[cod]
+*$py.class
+
+# folder
+data/
+logs/
+figures/
+models/
+ciena/
