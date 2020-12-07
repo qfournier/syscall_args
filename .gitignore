@@ -8,7 +8,6 @@ __pycache__/
 
 # folder
 data/
-logs/
 figures/
 models/
 ciena/

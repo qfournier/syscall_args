@@ -1,0 +1,105 @@
+    INFO - =========================================================================================
+    INFO -                                         Arguments                                        
+    INFO - =========================================================================================
+    INFO - it                       : 73        
+    INFO - seed                     : 0         
+    INFO - device                   : auto      
+    INFO - log                      : INFO      
+    INFO - data                     : data/requests
+    INFO - save_corpus              : False     
+    INFO - load_corpus              : True      
+    INFO - requests                 : False     
+    INFO - limit                    : None      
+    INFO - max_length               : None      
+    INFO - plot_hist                : False     
+    INFO - load_model               : None      
+    INFO - model                    : transformer
+    INFO - order                    : 2         
+    INFO - emb_sys                  : 32        
+    INFO - emb_proc                 : 16        
+    INFO - emb_pid                  : 4         
+    INFO - emb_tid                  : 4         
+    INFO - emb_time                 : 8         
+    INFO - emb_order                : 8         
+    INFO - heads                    : 8         
+    INFO - hiddens                  : 128       
+    INFO - layers                   : 6         
+    INFO - dropout                  : 0.1       
+    INFO - batch                    : 128       
+    INFO - valid                    : 0.25      
+    INFO - p_mask                   : 0.2       
+    INFO - mlm_epochs               : 100       
+    INFO - lm_epochs                : -1        
+    INFO - eval                     : 500       
+    INFO - lr                       : 0.001     
+    INFO - early_stopping           : 5         
+    INFO - checkpoint               : False     
+    INFO - disable_entry            : False     
+    INFO - disable_ret              : False     
+    INFO - disable_time             : False     
+    INFO - disable_proc             : False     
+    INFO - disable_pid              : False     
+    INFO - disable_tid              : False     
+    INFO - disable_order            : False     
+    INFO - =========================================================================================
+    INFO -                                        Vocabulary                                        
+    INFO - =========================================================================================
+    INFO - Vocabulary size          :        129
+    INFO - Number of process        :        208
+    INFO - =========================================================================================
+    INFO -                                    request_train Data                                    
+    INFO - =========================================================================================
+    INFO - Number of sequence       :     318674
+    INFO - =========================================================================================
+    INFO -                                     request_test Data                                    
+    INFO - =========================================================================================
+    INFO - Number of sequence       :     258190
+    INFO - Trainable parameters     :     256729
+    INFO - =========================================================================================
+    INFO -                              Pre-training using MLM on cuda                              
+    INFO - =========================================================================================
+    INFO - Updates    500 (epoch   1  @ 234ms/batch) loss 2.099  val_loss 1.671 acc 42.3%  val_acc 49.8%
+    INFO - Updates   1000 (epoch   1  @ 237ms/batch) loss 1.432  val_loss 1.004 acc 55.1%  val_acc 64.7%
+    INFO - Updates   1500 (epoch   1  @ 235ms/batch) loss 1.174  val_loss 0.737 acc 61.2%  val_acc 74.6%
+    INFO - Updates   2000 (epoch   1  @ 240ms/batch) loss 0.976  val_loss 0.520 acc 67.6%  val_acc 83.5%
+    INFO - Updates   2500 (epoch   2  @ 233ms/batch) loss 0.811  val_loss 0.414 acc 73.5%  val_acc 87.0%
+    INFO - Updates   3000 (epoch   2  @ 239ms/batch) loss 0.715  val_loss 0.353 acc 76.7%  val_acc 88.8%
+    INFO - Updates   3500 (epoch   2  @ 248ms/batch) loss 0.656  val_loss 0.311 acc 78.6%  val_acc 90.1%
+    INFO - Updates   4000 (epoch   2  @ 233ms/batch) loss 0.617  val_loss 0.286 acc 79.8%  val_acc 90.9%
+    INFO - Updates   4500 (epoch   2  @ 237ms/batch) loss 0.586  val_loss 0.271 acc 80.7%  val_acc 91.4%
+    INFO - Updates   5000 (epoch   3  @ 232ms/batch) loss 0.560  val_loss 0.259 acc 81.6%  val_acc 91.7%
+    INFO - Updates   5500 (epoch   3  @ 233ms/batch) loss 0.538  val_loss 0.245 acc 82.2%  val_acc 92.2%
+    INFO - Updates   6000 (epoch   3  @ 240ms/batch) loss 0.521  val_loss 0.244 acc 82.8%  val_acc 92.2%
+    INFO - Updates   6500 (epoch   3  @ 260ms/batch) loss 0.508  val_loss 0.232 acc 83.2%  val_acc 92.6%
+    INFO - Updates   7000 (epoch   3  @ 239ms/batch) loss 0.494  val_loss 0.226 acc 83.7%  val_acc 92.8%
+    INFO - Updates   7500 (epoch   4  @ 236ms/batch) loss 0.481  val_loss 0.227 acc 84.1%  val_acc 92.7%
+    INFO - Updates   8000 (epoch   4  @ 256ms/batch) loss 0.471  val_loss 0.218 acc 84.4%  val_acc 93.0%
+    INFO - Updates   8500 (epoch   4  @ 278ms/batch) loss 0.461  val_loss 0.218 acc 84.7%  val_acc 93.0%
+    INFO - Updates   9000 (epoch   4  @ 231ms/batch) loss 0.453  val_loss 0.215 acc 85.0%  val_acc 93.1%
+    INFO - Updates   9500 (epoch   4  @ 231ms/batch) loss 0.446  val_loss 0.211 acc 85.2%  val_acc 93.2%
+    INFO - Updates  10000 (epoch   5  @ 231ms/batch) loss 0.436  val_loss 0.211 acc 85.6%  val_acc 93.2%
+    INFO - Updates  10500 (epoch   5  @ 238ms/batch) loss 0.429  val_loss 0.207 acc 85.8%  val_acc 93.3%
+    INFO - Updates  11000 (epoch   5  @ 231ms/batch) loss 0.424  val_loss 0.199 acc 85.9%  val_acc 93.6%
+    INFO - Updates  11500 (epoch   5  @ 232ms/batch) loss 0.417  val_loss 0.197 acc 86.2%  val_acc 93.7%
+    INFO - Updates  12000 (epoch   5  @ 247ms/batch) loss 0.413  val_loss 0.195 acc 86.3%  val_acc 93.7%
+    INFO - Updates  12500 (epoch   6  @ 259ms/batch) loss 0.409  val_loss 0.196 acc 86.4%  val_acc 93.7%
+    INFO - Updates  13000 (epoch   6  @ 268ms/batch) loss 0.401  val_loss 0.191 acc 86.7%  val_acc 93.8%
+    INFO - Updates  13500 (epoch   6  @ 261ms/batch) loss 0.397  val_loss 0.192 acc 86.8%  val_acc 93.8%
+    INFO - Updates  14000 (epoch   6  @ 239ms/batch) loss 0.393  val_loss 0.186 acc 87.0%  val_acc 94.0%
+    INFO - Updates  14500 (epoch   6  @ 241ms/batch) loss 0.390  val_loss 0.190 acc 87.1%  val_acc 93.9%
+    INFO - Updates  15000 (epoch   7  @ 242ms/batch) loss 0.383  val_loss 0.192 acc 87.3%  val_acc 93.8%
+    INFO - Updates  15500 (epoch   7  @ 252ms/batch) loss 0.382  val_loss 0.195 acc 87.3%  val_acc 93.6%
+    INFO - Updates  16000 (epoch   7  @ 238ms/batch) loss 0.377  val_loss 0.195 acc 87.5%  val_acc 93.6%
+    INFO - Updates  16500 (epoch   7  @ 235ms/batch) loss 0.374  val_loss 0.181 acc 87.6%  val_acc 94.2%
+    INFO - Updates  17000 (epoch   7  @ 235ms/batch) loss 0.370  val_loss 0.183 acc 87.8%  val_acc 94.1%
+    INFO - Updates  17500 (epoch   8  @ 232ms/batch) loss 0.365  val_loss 0.183 acc 87.9%  val_acc 94.0%
+    INFO - Updates  18000 (epoch   8  @ 233ms/batch) loss 0.365  val_loss 0.180 acc 88.0%  val_acc 94.2%
+    INFO - Updates  18500 (epoch   8  @ 231ms/batch) loss 0.361  val_loss 0.179 acc 88.1%  val_acc 94.2%
+    INFO - Updates  19000 (epoch   8  @ 233ms/batch) loss 0.359  val_loss 0.179 acc 88.1%  val_acc 94.2%
+    INFO - Early stopping
+    INFO - Training done in 3:31:21
+    INFO - Best model loaded
+    INFO - =========================================================================================
+    INFO - Test loss 0.181 acc 94.2%
+    INFO - =========================================================================================
+    INFO - Test loss 3.543 acc 56.1%

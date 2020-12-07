@@ -226,9 +226,8 @@ def train(model, train_loader, valid_loader, epochs, early_stopping, optimizer,
     n_batch_train = len(train_loader)
     best_val_acc = 0
 
-    start, mlm_time = time(), time()
+    start, train_time = time(), time()
 
-    # pretrain with MLM
     for epoch in range(epochs):
         for i, data in enumerate(train_loader, 1):
             # send tensors to device
@@ -256,7 +255,7 @@ def train(model, train_loader, valid_loader, epochs, early_stopping, optimizer,
             # every 1000 updates, evaluate and collect metrics
             if (epoch * n_batch_train + i) % eval == 0:
                 # get average duration per batch in ms
-                avg_d = (time() - start)
+                avg_d = (time() - start) * 1000 / eval
 
                 # evaluate model
                 _val_loss, _val_acc = evaluate(model, valid_loader, criterion,
@@ -294,7 +293,7 @@ def train(model, train_loader, valid_loader, epochs, early_stopping, optimizer,
                 if early_stopping and steps > early_stopping:
                     logger.info('Early stopping')
                     logger.info('Training done in {}'.format(
-                        timedelta(seconds=round(time() - mlm_time))))
+                        timedelta(seconds=round(time() - train_time))))
                     return train_loss, val_loss, train_acc, val_acc
 
                 # prepare to resume training
@@ -305,7 +304,7 @@ def train(model, train_loader, valid_loader, epochs, early_stopping, optimizer,
                 start = time()
 
     logger.info('Training done in {}'.format(
-        timedelta(seconds=round(time() - mlm_time))))
+        timedelta(seconds=round(time() - train_time))))
     return train_loss, val_loss, train_acc, val_acc
 
 
@@ -323,7 +322,7 @@ def evaluate(model, test_loader, criterion, tokens, device, mlm):
             data, y, pad_mask = data[:-2], data[-2], data[-1]
 
             # get prediction
-            out = model(*data, pad_mask, mlm=False, chk=False)
+            out = model(*data, pad_mask, mlm, chk=False)
 
             # compute loss
             loss = criterion(out.reshape(-1, tokens), y.reshape(-1))

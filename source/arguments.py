@@ -107,7 +107,7 @@ def get_arguments():
                         default=0.5,
                         help='model dropout rate (embedding & encoder)')
     # training
-    parser.add_argument('--batch', type=int, default=32, help='batch size')
+    parser.add_argument('--batch', type=int, default=64, help='batch size')
     parser.add_argument('--valid',
                         type=float,
                         default=0.25,

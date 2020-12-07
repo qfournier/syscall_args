@@ -307,7 +307,8 @@ if args.load_model is None:
             model = torch.load(f)
             logger.info('Best model loaded')
 
-        # evaluate the model
+    # evaluate the model
+    if args.lm_epochs > 0 or args.lm_epochs == -1:
         criterion = nn.CrossEntropyLoss(ignore_index=0)
         test_loss, test_acc = evaluate(model,
                                        lm_test_loader,

@@ -69,7 +69,6 @@ class Transformer(nn.Module):
                                                    args.hiddens, args.dropout)
         self.encoder_layers = ModuleList(
             [copy.deepcopy(encoder_layer) for i in range(args.layers)])
-        self.encoder_norm = nn.modules.normalization.LayerNorm(self.emb_dim)
 
         # Decoder
         self.decoder = nn.Linear(self.emb_dim, n_syscall)
@@ -97,7 +96,7 @@ class Transformer(nn.Module):
         if not self.disable_entry:
             emb += self.embedding_entry(entry)
         if not self.disable_ret:
-            self.embedding_ret(ret)
+            emb += self.embedding_ret(ret)
 
         # Process embedding
         if not self.disable_proc:

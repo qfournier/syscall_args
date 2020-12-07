@@ -94,7 +94,7 @@ class LSTM(nn.Module):
         if not self.disable_entry:
             emb += self.embedding_entry(entry)
         if not self.disable_ret:
-            self.embedding_ret(ret)
+            emb += self.embedding_ret(ret)
 
         # Process embedding
         if not self.disable_proc:
